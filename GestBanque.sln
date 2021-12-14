@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestBanque", "GestBanque\GestBanque.csproj", "{4415F9E4-001E-466D-97FD-CF58505D0443}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{DD016D97-FA6A-45D0-A666-F94A2DB48425}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{9D363E0B-EAB1-4B78-8DBB-8EF01DE622BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dal", "Dal", "{8B3FC43D-82A6-4D61-A22B-7DB6C2AB64BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4415F9E4-001E-466D-97FD-CF58505D0443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4415F9E4-001E-466D-97FD-CF58505D0443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4415F9E4-001E-466D-97FD-CF58505D0443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4415F9E4-001E-466D-97FD-CF58505D0443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD016D97-FA6A-45D0-A666-F94A2DB48425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD016D97-FA6A-45D0-A666-F94A2DB48425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD016D97-FA6A-45D0-A666-F94A2DB48425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD016D97-FA6A-45D0-A666-F94A2DB48425}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4415F9E4-001E-466D-97FD-CF58505D0443} = {9D363E0B-EAB1-4B78-8DBB-8EF01DE622BA}
+		{DD016D97-FA6A-45D0-A666-F94A2DB48425} = {8B3FC43D-82A6-4D61-A22B-7DB6C2AB64BB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9587205F-0087-46DE-BCE0-C9CA14F499B4}
+	EndGlobalSection
+EndGlobal
