@@ -5,7 +5,12 @@ namespace GestBanque
     class Program
     {
         static void Main(string[] args)
-        {            
+        {
+            Banque banque = new Banque()
+            {
+                Nom = "Technobel Banking"
+            };
+
             Personne thierry = new Personne()
             {
                 Nom = "Morre",
@@ -20,13 +25,14 @@ namespace GestBanque
                 LigneDeCredit = 500
             };
 
-            courant.Depot(500);
-            courant.Depot(-500);
-            courant.Retrait(700);
-            courant.Retrait(700);
-            courant.Retrait(-700);
+            banque.Ajouter(courant);
+            banque["00001"].Depot(500);
+            banque["00001"].Depot(-500);
+            banque["00001"].Retrait(700);
+            banque["00001"].Retrait(700);
+            banque["00001"].Retrait(-700);
 
-            Console.WriteLine(courant.Solde);
+            Console.WriteLine(banque["00001"].Solde);
         }
     }
 }
