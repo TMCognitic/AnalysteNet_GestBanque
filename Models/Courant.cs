@@ -4,6 +4,11 @@ namespace Models
 {
     public class Courant
     {
+        public static double operator +(double total, Courant compte)
+        {
+            return (total < 0 ? 0 : total) + (compte.Solde < 0 ? 0 : compte.Solde); 
+        }
+
         private string _numero;
         private double _solde, _ligneDeCredit;
         private Personne _titulaire;
