@@ -50,7 +50,7 @@ namespace Models
             {
                 _titulaire = value;
             }
-        }
+        }        
 
         public void Depot(double montant)
         {

@@ -7,6 +7,10 @@ namespace GestBanque
     {
         static void Main(string[] args)
         {
+            Epargne.Taux = .045;
+            Courant.TauxPositif = .03;
+            Courant.TauxNegatif = .0975;
+
             Celsius c = new Celsius() { Temperature = 30 };
             Fahrenheit f = c; //Utilisation de l'opérateur de cast implicite
             Console.WriteLine($"30 °C = {f.Temperature} °F");

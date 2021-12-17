@@ -4,6 +4,34 @@ namespace Models
 {
     public class Courant : Compte
     {
+        private static double _tauxNegatif, _tauxPositif;
+
+        public static double TauxNegatif
+        {
+            get
+            {
+                return _tauxNegatif;
+            }
+
+            set
+            {
+                _tauxNegatif = value;
+            }
+        }
+
+        public static double TauxPositif
+        {
+            get
+            {
+                return _tauxPositif;
+            }
+
+            set
+            {
+                _tauxPositif = value;
+            }
+        }
+
         private double _ligneDeCredit;
 
         public double LigneDeCredit
@@ -32,7 +60,7 @@ namespace Models
 
         protected override double CalculInteret()
         {
-            return Solde * ((Solde < 0) ? .0975 : .03);
+            return Solde * ((Solde < 0) ? TauxNegatif : TauxPositif);
         }
     }
 }

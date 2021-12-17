@@ -4,6 +4,21 @@ namespace Models
 {
     public class Epargne : Compte
     {
+        private static double _taux;
+
+        public static double Taux
+        {
+            get
+            {
+                return _taux;
+            }
+
+            set
+            {
+                _taux = value;
+            }
+        }
+
         private DateTime _dateDernierRetrait;        
 
         public DateTime DateDernierRetrait
@@ -31,7 +46,7 @@ namespace Models
 
         protected override double CalculInteret()
         {
-            return Solde * .045;
+            return Solde * Taux;
         }
     }
 }
