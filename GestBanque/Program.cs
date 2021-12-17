@@ -42,15 +42,17 @@ namespace GestBanque
             };
 
             banque.Ajouter(compte1);
-            //banque.Ajouter(compte2);
+            banque.Ajouter(compte2);
 
             banque["00001"].Depot(500);
-            //banque["00002"].Depot(1500);
+            banque["00002"].Depot(1500);
             //banque["00001"].Depot(-500);
             banque["00001"].Retrait(700);
             banque["00001"].Retrait(100);
             banque["00001"].Retrait(700);
             //banque["00001"].Retrait(-700);
+
+            ((Courant)banque["00001"]).LigneDeCredit = 800; 
 
             Console.WriteLine($"Avoir des Compte de {thierry.Nom} {thierry.Prenom} : {banque.AvoirDesComptes(thierry)}");
             Console.WriteLine(banque["00001"].Solde);
