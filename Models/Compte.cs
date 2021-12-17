@@ -2,7 +2,7 @@
 
 namespace Models
 {
-    public class Compte
+    public abstract class Compte
     {
         public static double operator +(double total, Compte compte)
         {
@@ -83,6 +83,15 @@ namespace Models
             }
 
             Solde -= montant;
+        }
+
+        protected abstract double CalculInteret();
+
+        public void AppliquerInteret()
+        {
+            double interet = CalculInteret();
+            Console.WriteLine($"J'applique un intérêt de {interet} au compte {Numero}");
+            Solde += interet;
         }
     }
 }

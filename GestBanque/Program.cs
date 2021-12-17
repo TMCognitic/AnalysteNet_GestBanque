@@ -52,7 +52,10 @@ namespace GestBanque
             banque["00001"].Retrait(700);
             //banque["00001"].Retrait(-700);
 
-            ((Courant)banque["00001"]).LigneDeCredit = 800; 
+            ((Courant)banque["00001"]).LigneDeCredit = 800;
+
+            banque["00001"].AppliquerInteret();
+            banque["00002"].AppliquerInteret();
 
             Console.WriteLine($"Avoir des Compte de {thierry.Nom} {thierry.Prenom} : {banque.AvoirDesComptes(thierry)}");
             Console.WriteLine(banque["00001"].Solde);
