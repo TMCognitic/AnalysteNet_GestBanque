@@ -35,20 +35,20 @@ namespace GestBanque
                 LigneDeCredit = 500
             };
 
-            Courant compte2 = new Courant()
+            Epargne compte2 = new Epargne()
             {
                 Numero = "00002",
-                Titulaire = thierry,
-                LigneDeCredit = 0
+                Titulaire = thierry                
             };
 
             banque.Ajouter(compte1);
-            banque.Ajouter(compte2);
+            //banque.Ajouter(compte2);
 
             banque["00001"].Depot(500);
-            banque["00002"].Depot(1500);
+            //banque["00002"].Depot(1500);
             //banque["00001"].Depot(-500);
             banque["00001"].Retrait(700);
+            banque["00001"].Retrait(100);
             banque["00001"].Retrait(700);
             //banque["00001"].Retrait(-700);
 
