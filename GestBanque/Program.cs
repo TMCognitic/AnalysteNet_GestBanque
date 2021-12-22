@@ -26,7 +26,6 @@ namespace GestBanque
             };
 
             Personne thierry = new Personne("Morre", "Thierry", new DateTime(1974, 06, 05));
-
             Courant compte1 = new Courant("00001", 500, thierry);
             Epargne compte2 = new Epargne("00002", thierry);
 
@@ -35,11 +34,36 @@ namespace GestBanque
 
             banque["00001"].Depot(500);
             banque["00002"].Depot(1500);
-            //banque["00001"].Depot(-500);
+
+            try
+            {
+                banque["00001"].Depot(-500);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
             banque["00001"].Retrait(700);
             banque["00001"].Retrait(100);
-            banque["00001"].Retrait(700);
-            //banque["00001"].Retrait(-700);
+            
+            try
+            {
+                banque["00001"].Retrait(-700);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            try
+            {
+                banque["00001"].Retrait(700);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             ((Courant)banque["00001"]).LigneDeCredit = 800;
 

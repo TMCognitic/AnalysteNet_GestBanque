@@ -68,8 +68,7 @@ namespace Models
         {
             if (montant <= 0)
             {
-                Console.WriteLine("Montant invalide");
-                return; //Erreur
+                throw new ArgumentOutOfRangeException("montant invalide!");
             }
 
             Solde += montant;
@@ -84,14 +83,12 @@ namespace Models
         {
             if (montant <= 0)
             {
-                Console.WriteLine("Montant invalide");
-                return; //Erreur
+                throw new ArgumentOutOfRangeException("montant invalide!");
             }
 
             if (Solde - montant < -ligneDeCredit)
             {
-                Console.WriteLine("Solde Insuffisant");
-                return; //Erreur
+                throw new SoldeInsuffisantException();
             }
 
             Solde -= montant;

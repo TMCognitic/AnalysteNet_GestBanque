@@ -45,8 +45,7 @@ namespace Models
             {
                 if (value < 0)
                 {
-                    Console.WriteLine("La valeur de la ligne de crédit doit être positive");
-                    return; //Erreur
+                    throw new InvalidOperationException("La valeur de la ligne de crédit doit être positive");
                 }
 
                 _ligneDeCredit = value;
