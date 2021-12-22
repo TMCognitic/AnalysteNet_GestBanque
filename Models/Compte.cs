@@ -2,7 +2,7 @@
 
 namespace Models
 {
-    public abstract class Compte
+    public abstract class Compte : ICustomer, IBanker
     {
         public static double operator +(double total, Compte compte)
         {
@@ -20,7 +20,7 @@ namespace Models
                 return _numero;
             }
 
-            set
+            private set
             {
                 _numero = value;
             }
@@ -46,11 +46,23 @@ namespace Models
                 return _titulaire;
             }
 
-            set
+            private set
             {
                 _titulaire = value;
             }
-        }        
+        }
+
+        public Compte(string numero, Personne titulaire)
+        {
+            Numero = numero;
+            Titulaire = titulaire;
+        }
+
+        public Compte(string numero, Personne titulaire, double solde)
+            : this(numero, titulaire)
+        {
+            Solde = solde;
+        }
 
         public void Depot(double montant)
         {

@@ -25,25 +25,10 @@ namespace GestBanque
                 Nom = "Technobel Banking"
             };
 
-            Personne thierry = new Personne()
-            {
-                Nom = "Morre",
-                Prenom = "Thierry",
-                DateNaiss = new DateTime(1974, 06, 05)
-            };
+            Personne thierry = new Personne("Morre", "Thierry", new DateTime(1974, 06, 05));
 
-            Courant compte1 = new Courant()
-            {
-                Numero = "00001",
-                Titulaire = thierry,
-                LigneDeCredit = 500
-            };
-
-            Epargne compte2 = new Epargne()
-            {
-                Numero = "00002",
-                Titulaire = thierry                
-            };
+            Courant compte1 = new Courant("00001", 500, thierry);
+            Epargne compte2 = new Epargne("00002", thierry);
 
             banque.Ajouter(compte1);
             banque.Ajouter(compte2);
